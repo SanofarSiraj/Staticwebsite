@@ -3,11 +3,11 @@ phases:
   pre_build:
     commands:
       - echo Restore started on `date`
-      - dotnet restore WebAppstatic.csproj
+      - dotnet restore Staticwebsite.csproj
   build:
     commands:
       - echo Build started on `date`
-      - dotnet publish -c release -o ./build_output WebAppstatic.csproj
+      - dotnet publish -c release -o ./build_output Staticwebsite.csproj
   post_build:
     commands:
       - echo "Deployed to s3"
